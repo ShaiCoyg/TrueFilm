@@ -22,6 +22,8 @@ router.get('/', async (req, res) => {
             query = query.regex('title', new RegExp(req.query.title, 'i'))
     }
     query = query.lte('genre', req.query.genre)
+    query = query.gte('genre', req.query.genre)
+
     try {
         const films = await query.exec()
         res.render('films/index', {

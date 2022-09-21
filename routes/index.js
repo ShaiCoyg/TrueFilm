@@ -3,7 +3,7 @@ const router = express.Router()
 const Film = require('../models/film')
 
 router.get('/', async (req, res) => {
-    let Films
+    let films
     try {
         films = await Film.find().sort({ createdAt:'desc'}).limit(5).exec()
     }

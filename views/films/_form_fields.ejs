@@ -20,7 +20,12 @@
     <input type="number" name="releaseYear" value="<%= film.releaseYear %>" required>    
 </div>
 <div>
-
+    <label>Genre</label>
+    <select name="genre">
+        <% genre.forEach(g => { %>
+            <option value="<%= g %>"><%= g %></option>
+        <% }) %>
+    </select>
 </div>
 <div>
     <label>Length</label>

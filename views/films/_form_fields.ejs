@@ -1,16 +1,21 @@
-
+<% const genre = ['horror', 'comedy', 'fantasy', 'classic', 'drama', 'war', 'action', 'adventure', 'psychological'] %>
 <div>
-    <label>Release Year</label>
-    <input type="number" name="releaseYear" value="<%= film.releaseYear %>" required>    
+    <label>Title</label>
+    <input type="text" name="title" value="<%= film.title %>" required>
 </div>
 <div>
-    <label>Genre</label>
-    <select name="genre">
-        <% genre.forEach(g => { %>
-            <option value="<%= g %>"><%= g %></option>
-        <% }) %>
+    <label>Director</label>
+    <select name="director">
+    <% directors.forEach(director => { %>
+        <% if (director.id === film.director) { %>
+            <option selected label="<%= director.name %>" value="<%= director.id %>"></option>
+            <% } else { %>
+                    <option value="<%= director.id %>"><%= director.name %></option>
+                    <% } %>
+                <% }) %>
     </select>
 </div>
+
 <div>
     <label>Length</label>
     <input type="number" name="length" min="1" value="<%= film.length %>" required>    

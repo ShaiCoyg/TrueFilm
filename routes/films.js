@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-// New Film Route
+//  New Film Route
 router.get('/new', async (req, res) => {
     renderNewPage(res, new Film())
 })

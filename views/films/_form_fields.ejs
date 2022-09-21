@@ -15,7 +15,21 @@
                 <% }) %>
     </select>
 </div>
-
+<div>
+    <label>Release Year</label>
+    <input type="number" name="releaseYear" value="<%= film.releaseYear %>" required>    
+</div>
+<div>
+    <label>Genre</label>
+    <select name="genre">
+        <% genre.forEach(g => { %>
+            <% if (genre.id === film.genre) { %>
+                <option selected label="<%= g %>" value="<%= g %>"></option>
+                <% } else { %>
+                        <option value="<%= g %>"><%= g %></option>
+                        <% } %>
+                    <% }) %>
+</div>
 <div>
     <label>Length</label>
     <input type="number" name="length" min="1" value="<%= film.length %>" required>    

@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
     })
     try {
         const newDirector = await director.save()
-        res.redirect(`/directors/` + newDirector.id)
+        res.redirect(`/directors/${newDirector.id}`)
     }
     catch {
         res.render('directors/new', {
@@ -73,7 +73,7 @@ router.put('/:id', async (req, res) => {
         director = await Director.findById(req.params.id)
         director.name = req.body.name
       await director.save()
-      res.redirect(`/directors/` + director.id)
+      res.redirect(`/directors/${director.id}`)
     } catch {
       if (director == null) {
         res.redirect('/')
@@ -96,8 +96,7 @@ router.delete('/:id', async (req, res) => {
       if (director == null) {
         res.redirect('/')
       } else {
-        console.log(director.id)
-        res.redirect('/directors/' + director.id)
+        res.redirect(`/directors/${director.id}`)
       }
     }})
 

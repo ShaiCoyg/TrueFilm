@@ -1,0 +1,11 @@
+<h2> <%= film.title %> </h2>
+<img height="150" width="100" src="<%= film.posterImagePath %>">
+<div>Director: <%= film.director.name %></div>
+<div>Release Year: <%= film.releaseYear %> </div>
+<div>Genre: <%= film.genre %> </div>
+<div>Length: <%= film.length %></div>
+<div>Description: <%= film.description %></div>
+
+<a href="/films/<%= film.id %>/edit">Edit</a>
+<%- include('../partials/deleteForm', { url: `/films/${film.id}`}) %>
+<a href="/directors/<%= film.director.id %>">View Director></a>

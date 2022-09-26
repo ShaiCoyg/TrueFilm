@@ -9,14 +9,12 @@ const imageMimeTypes = ['image/jpeg', 'image/png', 'images/gif']
 router.get('/', async (req, res) => {
     let query = Film.find()
     if ((req.query.title) != null && req.query.title != '') {
-            query = query.regex('title', new RegExp(req.query.title, 'i'))
+        query = query.regex('title', new RegExp(req.query.title, 'i'))
     }
-    if ((req.query.title) != null && req.query.title != '') {
-        query = query.lte('genre', req.query.genre)
+    if ((req.query.genre) != null && req.query.genre != '') {
+        query = query.regex('genre', new RegExp(req.query.genre, 'i'))
     }
-    if ((req.query.title) != null && req.query.title != '') {
-        query = query.gte('genre', req.query.genre)
-    }
+
     try {
         const films = await query.exec()
         res.render('films/index', {
@@ -97,7 +95,7 @@ router.put('/:id', async (req, res) => {
         }
         catch {
             if (film != null) {
-                renderEditPage(res, book, true)
+                renderEditPage(res, film, true)
             }
             else {
                 redirect('/')

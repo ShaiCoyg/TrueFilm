@@ -46,4 +46,5 @@ filmSchema.virtual('posterImagePath').get(function() {
         return `data:${this.posterImageType};charset=utf-8;base64,${this.posterImage.toString('base64')}`
     }
 })
+
 module.exports = mongoose.model('Film', filmSchema)

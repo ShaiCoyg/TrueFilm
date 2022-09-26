@@ -1,5 +1,4 @@
 <% const genre = ['horror', 'comedy', 'fantasy', 'classic', 'drama', 'war', 'action', 'adventure', 'psychological', 'mystery'] %>
-
 <h2>Search Film</h2>
 <form action="/films" method="GET">
     <div>
@@ -10,8 +9,12 @@
         <label>Genre</label>
         <select name="genre">
             <% genre.forEach(g => { %>
-                <option value="<%= g %>"><%= g %></option>
-            <% }) %>
+                <% if (g === searchOptions.genre) { %>
+                    <option selected label="<%= g %>" value="<%= g %>"></option>
+                    <% } else { %>
+                            <option value="<%= g %>"><%= g %></option>
+                            <% } %>
+                        <% }) %>
         </select>
     </div>
     <button type="submit">Search</button>
@@ -21,3 +24,4 @@
       <a href="/films/<%= film.id %>"><img height="150" width="100" src="<%= film.posterImagePath %>">  </a>
     <% }) %>
   </div>
+  

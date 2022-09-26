@@ -23,7 +23,7 @@
     <label>Genre</label>
     <select name="genre">
         <% genre.forEach(g => { %>
-            <% if (genre.id === film.genre) { %>
+            <% if (g === film.genre) { %>
                 <option selected label="<%= g %>" value="<%= g %>"></option>
                 <% } else { %>
                         <option value="<%= g %>"><%= g %></option>

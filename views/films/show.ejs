@@ -1,10 +1,15 @@
-<h2> <%= film.title %> </h2>
+<h2 class="page-header"> <%= film.title %> </h2>
 <img height="150" width="100" src="<%= film.posterImagePath %>">
-<div>Director: <%= film.director.name %></div>
-<div>Release Year: <%= film.releaseYear %> </div>
 <div>Genre: <%= film.genre %> </div>
-<div>Length: <%= film.length %></div>
+<div>Release Year: <%= film.releaseYear %> </div>
+<div>Runtime: <%= film.runTime %></div>
+<div>Director: <%= film.director.name %></div>
+<div>Writers: <%= film.writers %></div>
+<div>Stars: <%= film.stars %></div>
+<div>Score: <%= film.score %></div>
+<div>Summary: <%= film.summary %></div>
 <div>Description: <%= film.description %></div>
+
 
 <a href="/films/<%= film.id %>/edit">Edit</a>
 <%- include('../partials/deleteForm', { url: `/films/${film.id}`}) %>

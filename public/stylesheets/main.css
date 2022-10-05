@@ -7,14 +7,12 @@
     font-family: 'Gotham Rounded';
     font-size: 20px;
     color: white;
+    background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-body {
-    background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
 }
 
 .container {

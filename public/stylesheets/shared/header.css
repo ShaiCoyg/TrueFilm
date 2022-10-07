@@ -9,7 +9,6 @@
     text-decoration: none;
     font-size: var(--nav-title-font-size);
     font-weight: var(--nav-title-font-weight);
-    margin-left: -150px;
 }
 
 .header-nav {
@@ -23,8 +22,6 @@
 .header-nav ul {
     display: flex;
     margin: 0;
-    margin-top: 20px;
-    margin-right: 100px;
     padding: 0;
     border-radius: 0.5rem;
     border-top: 1px solid white;
@@ -36,6 +33,7 @@
 .header-nav li {
     list-style: none;
 }
+
 .header-nav li a {
     text-decoration: none;
     color: var(--color-text-light);

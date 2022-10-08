@@ -32,13 +32,15 @@
     font-size: 1.2rem;
     font-weight: 500;
     align-self: flex-start;
+    width: 130%;
   }
   
   .film-details-grid {
     display: grid;
     align-content: flex-start;
     align-items: center;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
+    row-gap: 0.5rem;
     grid-template-columns: auto auto;
   }
   

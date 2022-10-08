@@ -34,7 +34,7 @@ const filmSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    summary: {
+    review: {
         type: String,
         required: true
     },

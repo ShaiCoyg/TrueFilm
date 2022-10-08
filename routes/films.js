@@ -43,7 +43,7 @@ router.post('/', async (req, res) => {
         writers: req.body.writers,
         stars: req.body.stars,
         score: req.body.score,
-        summary: req.body.summary,
+        review: req.body.review,
         description: req.body.description
     })
     try {
@@ -88,16 +88,15 @@ router.put('/:id', async (req, res) => {
     try {
         film = await Film.findById(req.params.id)
         film.title = req.body.title
-        film.genre = req.body.genre
+        film.genre = req.body.genre.toString()
         film.releaseYear = req.body.releaseYear
         film.runTime = req.body.runTime
         film.director = req.body.director
         film.writers = req.body.writers
         film.stars = req.body.stars
         film.score = req.body.score
-        film.summary = req.body.summary
+        film.review = req.body.review
         film.description = req.body.description
-
         if (req.body.poster != null & req.body.poster != '') {
             savePoster(film, req.body.poster)
         }

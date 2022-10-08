@@ -56,3 +56,30 @@
 .films-of-director {
     margin-right: 100px;
 }
+
+.contact {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact input {
+    width: 250px;
+    background-color: var(--color-background-dark);
+}
+
+.contact textarea {
+    width: 350px;
+    height: 150px;
+    background-color: var(--color-background-dark);
+}
+
+.form-header {
+    text-align: center;
+}
+
+.contact a {
+    text-decoration: none;
+}

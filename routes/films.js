@@ -36,7 +36,7 @@ router.get('/new', async (req, res) => {
 router.post('/', async (req, res) => {
     const film = new Film({
         title: req.body.title,
-        genre: req.body.genre.toString(),
+        genre: req.body.genre,
         releaseYear: req.body.releaseYear,
         runTime: req.body.runTime,
         director: req.body.director,
@@ -46,8 +46,10 @@ router.post('/', async (req, res) => {
         summary: req.body.summary,
         description: req.body.description
     })
-    savePoster(film, req.body.poster)
     try {
+        const arr = req.body.genre.toString()
+        film.genre = arr
+        savePoster(film, req.body.poster)
         const newFilm = await film.save()
         res.redirect(`/films/${newFilm.id}`)
     }
@@ -126,7 +128,7 @@ router.delete('/:id', async (req, res) => {
         if (film != null) {
             res.render('films/show', {
                 film: film,
-                errorMessage: 'Could not remove film'
+                errorMessage: 'Error deleting film'
             })
         }
         else {
@@ -152,9 +154,9 @@ async function renderFormPage (res, film, form, hasError=false) {
         }
         if (hasError) {
             if (form === 'edit') {
-              params.errorMessage = 'Error Updating Film'
+              params.errorMessage = 'Please enter valid inputs.'
             } else {
-              params.errorMessage = 'Error Creating Film'
+              params.errorMessage = 'Please enter valid inputs.'
             }
           }
         res.render(`films/${form}`, params)

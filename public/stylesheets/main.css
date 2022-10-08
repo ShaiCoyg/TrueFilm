@@ -2,6 +2,10 @@
 @import 'shared/variables.css';
 @import 'shared/header.css';
 @import 'shared/buttons.css';
+@import 'shared/forms.css';
+@import 'shared/directors.css';
+@import 'shared/films.css';
+
 
 :root {
     font-family: 'Gotham Rounded';
@@ -32,6 +36,23 @@
 }
 
 .page-header {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 300;
+}
+
+.page-header-semi {
+    font-size: 1.8rem;
+}
+
+.error-message {
+    color: var(--color-text-light);
+    font-weight: bold;
+}
+
+.film-details-grid {
+    margin-left: 45px;
+}
+
+.films-of-director {
+    margin-right: 100px;
 }

@@ -1,16 +1,31 @@
 <h2 class="page-header"> <%= film.title %> </h2>
-<img height="150" width="100" src="<%= film.posterImagePath %>">
-<div>Genre: <%= film.genre %> </div>
-<div>Release Year: <%= film.releaseYear %> </div>
-<div>Runtime: <%= film.runTime %></div>
-<div>Director: <%= film.director.name %></div>
-<div>Writers: <%= film.writers %></div>
-<div>Stars: <%= film.stars %></div>
-<div>Score: <%= film.score %></div>
-<div>Summary: <%= film.summary %></div>
-<div>Description: <%= film.description %></div>
-
-
-<a href="/films/<%= film.id %>/edit">Edit</a>
-<%- include('../partials/deleteForm', { url: `/films/${film.id}`}) %>
-<a href="/directors/<%= film.director.id %>">View Director></a>
+<div class="film-details">
+    <div>
+        <img class="film-poster" src="<%= film.posterImagePath %>">
+        <div class="film-details-btn-grid">
+            <a class="btn btn-primary" href="/films/<%= film.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', { url: `/films/${film.id}`}) %>
+            <a class="btn btn-primary film-details-director-button" href="/directors/<%= film.director.id %>">View Director</a>
+        </div>
+    </div>
+    <div class="film-details-grid">
+        <div class="film-details-label">Release Year </div>
+        <div> <%= film.releaseYear %> </div>
+        <div class="film-details-label">Runtime </div>
+        <div> <%= film.runTime %></div>
+        <div class="film-details-label">Genre </div>
+        <div> <%= film.genre %> </div>
+        <div class="film-details-label">Director </div>
+        <div> <%= film.director.name %></div>
+        <div class="film-details-label">Writers </div>
+        <div> <%= film.writers %></div>
+        <div class="film-details-label">Stars </div>
+        <div> <%= film.stars %></div>
+        <div class="film-details-label">Score </div>
+        <div> <%= film.score %></div>
+        <div class="film-details-label">Summary </div>
+        <div> <%= film.summary %></div>
+        <div class="film-details-label">Description </div>
+        <div> <%= film.description %></div>
+    </div>
+</div>

@@ -5,7 +5,7 @@ const Film = require('../models/film')
 router.get('/', async (req, res) => {
     let films
     try {
-        films = await Film.find().sort({ createdAt:'desc'}).limit(5).exec()
+        films = await Film.find().sort({ createdAt:'desc'}).limit(6).exec()
     }
     catch {
         films = []

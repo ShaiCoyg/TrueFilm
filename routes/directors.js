@@ -29,7 +29,8 @@ router.get('/new', async (req, res) => {
 // Create Author Route
 router.post('/', async (req, res) => {
     const director = new Director({
-        name: req.body.name
+        name: req.body.name,
+        description: req.body.description
     })
     try {
         const newDirector = await director.save()
@@ -38,7 +39,7 @@ router.post('/', async (req, res) => {
     catch {
         res.render('directors/new', {
             director: director,
-            errorMessage: 'Error creating director'
+            errorMessage: 'Please enter a director name'
         })
     }
 })
@@ -72,6 +73,7 @@ router.put('/:id', async (req, res) => {
     try {
         director = await Director.findById(req.params.id)
         director.name = req.body.name
+        director.description = req.body.description
       await director.save()
       res.redirect(`/directors/${director.id}`)
     } catch {
@@ -80,7 +82,7 @@ router.put('/:id', async (req, res) => {
       } else {
         res.render('directors/edit', {
             director: director,
-          errorMessage: 'Error updating Author'
+            errorMessage: 'Please enter a director name'
         })
       }
     }

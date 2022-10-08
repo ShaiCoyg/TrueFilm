@@ -1,13 +1,13 @@
-<h2><%= director.name %></h2>
-<a href="/directors/<%= director.id %>/edit">Edit</a>
-<%- include('../partials/deleteForm',
-            { url: `/directors/${director.id}` }) %>
+<h2 class="page-header"><%= director.name %></h2>
+<div class="film-details-label director-des"><%= director.description %></div>
+<div class="btn-row">
+  <a class="btn btn-primary" href="/directors/<%= director.id %>/edit">Edit</a>
+  <%- include('../partials/deleteForm',
+              { url: `/directors/${director.id}` }) %>
+</div>
 <% if (filmsByDirector.length > 0) { %>
-    <h2>Films By Director</h2>
-    <% filmsByDirector.forEach(film => { %>
-      <a href="/films/<%= film.id %>">
-        <a href="/films/<%= film.id %>">
-          <img height="150" width="100" src="<%= film.posterImagePath %>">
-      </a>
-    <% }) %>
+    <h2 class="page-header page-header-semi">Films By Director</h2>
+    <div class="films-of-director">
+    <%- include('../partials/filmGrid', { films: filmsByDirector }) %>
   <% } %>
+  </div>

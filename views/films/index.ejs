@@ -1,27 +1,32 @@
 <% const genre = [' Action', ' Drama', ' Comedy', ' Horror', ' Fantasy', ' Crime', ' Adventure', ' War', ' Sports', ' Psychological'] %>
 <h2 class="page-header">Search Film</h2>
 <form action="/films" method="GET">
-    <div>
-        <label>Title</label>
-        <input type="text" name="title" value="<%= searchOptions.title %>">
+    <div class="form-row">
+        <div class="form-item">
+            <label>Title</label>
+            <input type="text" name="title" value="<%= searchOptions.title %>">
+        </div>
     </div>
-    <div>
-        <label>Genre</label>
-        <select name="genre">
-            <% genre.forEach(g => { %>
-                <% if (g === searchOptions.genre) { %>
-                    <option selected label="<%= g %>" value="<%= g %>"></option>
-                    <% } else { %>
-                            <option value="<%= g %>"><%= g %></option>
-                            <% } %>
-                        <% }) %>
-        </select>
+    <div class="form-row">
+        <div class="form-item">
+            <label>Genre</label>
+            <select name="genre">
+                <% genre.forEach(g => { %>
+                    <% if (g === searchOptions.genre) { %>
+                        <option selected label="<%= g %>" value="<%= g %>"></option>
+                        <% } else { %>
+                                <option value="<%= g %>"><%= g %></option>
+                                <% } %>
+                            <% }) %>
+            </select>
+        </div>
     </div>
-    <button type="submit">Search</button>
+    <div class="form-row form-row-end">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
 </form>
-<div>
-    <% films.forEach(film => { %>
-      <a href="/films/<%= film.id %>"><img height="150" width="100" src="<%= film.posterImagePath %>">  </a>
-    <% }) %>
-  </div>
+<br>
+<br>
+<%- include('../partials/filmGrid', { films: films, large: true}) %>
+
   

@@ -4,6 +4,10 @@ const directorsSchemass = new mongoose.Schema({
     name: {
         type: String,
         required: true
+    },
+    description: {
+        type: String,
+        required: true
     }
 })
 
@@ -13,7 +17,7 @@ directorsSchemass.pre('remove', function(next) {
             next(err)
         }
         else if (films.length > 0) {
-            next(new Error('This director has films in this website'))
+            next(new Error('Could not delete ' + this.name + '. please make sure to first delete ' + this.title + ' films'))
         }
         else {
             next()

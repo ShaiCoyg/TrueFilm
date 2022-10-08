@@ -1,7 +1,9 @@
 <H2 class="page-header">Edit Film</H2>
 <form action="/films/<%= film.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %>
-    <a href="/films">cancel</a>
-    <button type="submit">Update</button>
+    <div class="form-row form-row-end btn-row">
+        <a class="btn btn-primary" href="/films">cancel</a>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
 </form>
 

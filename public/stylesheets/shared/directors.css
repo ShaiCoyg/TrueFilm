@@ -11,3 +11,7 @@
 .director-des {
     margin-bottom: 20px;
 }
+
+.dir-name input {
+    width: 50%;
+}

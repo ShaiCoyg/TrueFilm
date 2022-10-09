@@ -37,26 +37,33 @@
 
 @media only screen and (max-width: 1000px) {
     .container {
+        display: flex;
+        flex-direction: column;
         justify-items: center;
         justify-content: center;
         align-items: center;
         margin: 0;
     }
     .inner-container {
+        display: flex;
+        flex-direction: column;
         justify-items: center;
         justify-content: center;
         align-items: center;
         margin: 0;
     }
     .page-header {
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        flex-direction: row;
         justify-items: center;
         justify-content: center;
         align-items: center;
         margin: 0;
     }
     .header-title {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         justify-items: center;
         justify-content: center;
@@ -64,17 +71,22 @@
         margin: 0;
     }
     .contact {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         justify-items: center;
         align-items: center;
         margin: 0;
     }
     .film-grid {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         margin: 0;
     }
     .director-row {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
         margin-bottom: 1rem;
     }
@@ -83,6 +95,7 @@
     }
     .film-grid a img {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         justify-items: center;
         align-items: center;

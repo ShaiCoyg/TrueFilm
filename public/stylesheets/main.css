@@ -37,8 +37,6 @@
 
 @media only screen and (max-width: 1000px) {
     .container {
-        display: flex;
-        flex-direction: column;
         justify-items: center;
         justify-content: center;
         align-items: center;

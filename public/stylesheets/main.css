@@ -36,12 +36,6 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    html, body {
-        overflow-x: hidden;
-      }
-      body {
-        position: relative
-      }
     body {
         display: flex;
         flex-wrap: wrap;

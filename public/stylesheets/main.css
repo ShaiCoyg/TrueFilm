@@ -45,28 +45,24 @@
     body {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
         justify-content: center;
         align-items: center;
     }
     .container {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
         justify-content: center;
         align-items: center;
     }
     .inner-container {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
         justify-content: center;
         align-items: center;
     }
     .header-nav {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
         justify-content: center;
         align-items: center;
     }

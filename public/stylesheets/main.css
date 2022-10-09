@@ -52,14 +52,6 @@
         justify-content: center;
         align-items: center;
     }
-    .header-nav {
-        display: flex;
-        flex-wrap: column;
-        flex-direction: row;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
-    }
     .page-header {
         display: flex;
         flex-wrap: wrap;

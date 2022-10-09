@@ -81,6 +81,12 @@
     .dir-index {
         margin-left: 100px;
     }
+    .film-grid a img {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
 }
 
 .page-header {

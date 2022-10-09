@@ -66,6 +66,7 @@
     }
     .film-grid {
         justify-content: center;
+        margin: 0;
     }
     .director-row {
         display: flex;

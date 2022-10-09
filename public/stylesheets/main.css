@@ -36,7 +36,7 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .container {
+    body {
         display: flex;
         flex-wrap: wrap;
         width: 100%;

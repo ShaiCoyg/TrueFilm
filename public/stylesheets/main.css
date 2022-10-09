@@ -37,16 +37,11 @@
 
 @media only screen and (max-width: 1000px) {
     .inner-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
         justify-items: center;
         justify-content: center;
         align-items: center;
     }
     .page-header {
-        display: flex;
-        flex-wrap: wrap;
         text-align: center;
         flex-direction: row;
         justify-items: center;
@@ -54,28 +49,18 @@
         align-items: center;
     }
     .header-title {
-        display: flex;
-        flex-wrap: wrap;
         text-align: center;
-        flex-direction: row;
         justify-items: center;
         justify-content: center;
         align-items: center;
     }
     .contact {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         justify-items: center;
         align-items: center;
     }
     .film-grid {
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        justify-items: center;
-        flex-direction: row;
-        align-items: center;
     }
     .director-row {
         display: flex;

@@ -44,8 +44,6 @@
         width: 100%;
     }
     .inner-container {
-        display: flex;
-        flex-direction: column;
         justify-items: center;
         justify-content: center;
         align-items: center;
@@ -53,8 +51,6 @@
         width: 100%;
     }
     .page-header {
-        display: flex;
-        flex-direction: column;
         text-align: center;
         justify-items: center;
         justify-content: center;
@@ -63,8 +59,6 @@
         width: 100%;
     }
     .header-title {
-        display: flex;
-        flex-direction: column;
         text-align: center;
         justify-items: center;
         justify-content: center;
@@ -73,8 +67,6 @@
         width: 100%;
     }
     .contact {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         justify-items: center;
         align-items: center;
@@ -82,8 +74,6 @@
         width: 100%;
     }
     .film-grid {
-        display: flex;
-        flex-direction: column;
         justify-items: center;
         justify-content: center;
         margin: 0;
@@ -100,8 +90,6 @@
         margin-left: 100px;
     }
     .film-grid a img {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         justify-items: center;
         align-items: center;

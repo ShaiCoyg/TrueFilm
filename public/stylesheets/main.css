@@ -40,11 +40,13 @@
         justify-items: center;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
     .inner-container {
         justify-items: center;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
     .page-header {
         text-align: center;
@@ -52,17 +54,20 @@
         justify-items: center;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
     .header-title {
         text-align: center;
         justify-items: center;
         justify-content: center;
         align-items: center;
+        margin: 0;
     }
     .contact {
         justify-content: center;
         justify-items: center;
         align-items: center;
+        margin: 0;
     }
     .film-grid {
         justify-content: center;

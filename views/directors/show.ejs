@@ -1,7 +1,7 @@
 <h2 class="page-header"><%= director.name %></h2>
 <div class="film-details-label director-des"><%= director.description %></div>
 <div class="btn-row">
-  <a class="btn btn-primary" href="/directors/<%= director.id %>/edit">Edit</a>
+  <a class="btn btn-primary" href="/directors/<%= director.id %>/edit" disabled>Edit</a>
   <%- include('../partials/deleteForm',
               { url: `/directors/${director.id}` }) %>
 </div>

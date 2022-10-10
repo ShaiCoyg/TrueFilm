@@ -26,14 +26,9 @@
     position: relative;
 }
 
-button {
-    
-}
-
 .inner-container {
     font-weight: 300;
     margin: 0 2rem;
-    padding-left: 20px;
     position: relative;
     top: -50px;
     min-height: 1000px;

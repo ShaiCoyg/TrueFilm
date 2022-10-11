@@ -3,7 +3,7 @@
     <div>
         <img class="film-poster" src="<%= film.posterImagePath %>">
         <div class="film-details-btn-grid">
-            <a class="btn btn-primary" href="/films/<%= film.id %>/edit" disabled>Edit</a>
+            <a class="btn btn-primary" href="/films/<%= film.id %>/edit">Edit</a>
             <%- include('../partials/deleteForm', { url: `/films/${film.id}`}) %>
             <a class="btn btn-primary film-details-director-button" href="/directors/<%= film.director.id %>">View Director</a>
         </div>

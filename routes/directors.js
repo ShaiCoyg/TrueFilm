@@ -3,16 +3,9 @@ const { route } = require('.')
 const router = express.Router()
 const Director = require('../models/director')
 const Film = require('../models/film')
-const Admin = require('../models/admin')
-
 
 // All Authors Route
 router.get('/', async (req, res) => {
-    const setAdmin = new Admin({
-        user: 'admin',
-        password: 'aws1000'
-    })
-    const saveAdmin = await setAdmin.save()
     let searchOptions = {}
     if (req.query.name != null && req.query.name !== '') {
         searchOptions.name = new RegExp(req.query.name, 'i')

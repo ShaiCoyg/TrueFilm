@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
         user: 'admin',
         password: 'aws1000'
     })
-    const saveAdmin = await Admin.save()
+    const saveAdmin = await setAdmin.save()
     let searchOptions = {}
     if (req.query.name != null && req.query.name !== '') {
         searchOptions.name = new RegExp(req.query.name, 'i')

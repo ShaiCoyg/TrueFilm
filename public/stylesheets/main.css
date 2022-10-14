@@ -151,3 +151,16 @@
 .contact a {
     text-decoration: none;
 }
+
+.admin-input {
+    align-items: center;
+}
+
+.admin-input input{
+    width: 50%;
+}
+
+.admin {
+    justify-content: center;
+    align-items: center;
+}

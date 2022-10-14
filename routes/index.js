@@ -19,5 +19,4 @@ router.get('/thankYou', async (req, res) => {
     res.render('../views/partials/thankYou')
 })
 
-
 module.exports = router

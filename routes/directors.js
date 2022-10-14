@@ -21,12 +21,12 @@ router.get('/', async (req, res) => {
     }
 })
 
-// New Author Route
+// New director Route
 router.get('/new', async (req, res) => {
     res.render('directors/new', { director: new Director()})
 })
 
-// Create Author Route
+// Create director Route
 router.post('/', async (req, res) => {
     const director = new Director({
         name: req.body.name,

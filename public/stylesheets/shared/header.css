@@ -24,13 +24,21 @@
     display: flex;
     margin: 0;
     margin-top: 20px;
-    margin-right: 50px;
+    margin-right: 100px;
     padding: 0;
     border-radius: 0.5rem;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
     border-left: 1px solid white;
+}
+
+li .admin-btn {
+    border: 1px solid white;
+}
+
+li .admin-btn:hover {
+    border: 1px solid red;
 }
 
 .header-nav li {
